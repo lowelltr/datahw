@@ -10,16 +10,17 @@ $("#submit").click(function(){
  $("#submit2").click(function(){
         console.log(bugs);
            bugs.shift($("dead").val());
+ function getTimeStamp() {
+            let now = new Date();
+            return ((now.getMonth() + 1) + '/' + (now.getDate()) + '/' + now.getFullYear() + " " + now.getHours() + ':'
+            + ((now.getMinutes() < 10) ? ("0" + now.getMinutes()) : (now.getMinutes())) + ':' + ((now.getSeconds() < 10) ? ("0" + now.getSeconds()) : (now.getSeconds())));
+             }
+ function setTime() {
+        document.getElementById('time submitted').value = getTimeStamp();
+        }
+           
         });   
 
-function getTimeStamp() {
-    let now = new Date();
-    return ((now.getMonth() + 1) + '/' + (now.getDate()) + '/' + now.getFullYear() + " " + now.getHours() + ':'
-    + ((now.getMinutes() < 10) ? ("0" + now.getMinutes()) : (now.getMinutes())) + ':' + ((now.getSeconds() < 10) ? ("0" + now.getSeconds()) : (now.getSeconds())));
-     }
-     function setTime() {
-         document.getElementById('field').value = getTimeStamp();
-     }
 });
 
 
